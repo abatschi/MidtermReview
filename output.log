@@ -1,0 +1,53 @@
+nohup: ignoring input
+[0mGET /admin.html [36m304 [0m5.022 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m1.158 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m289.376 ms - 1818[0m
+[0mGET /product [36m304 [0m17.971 ms - -[0m
+[0mGET /customer.html [36m304 [0m0.539 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.331 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m44.078 ms - 1818[0m
+[0mGET /%7B%7Bselected.pictureUrl%7D%7D [33m404 [0m34.901 ms - 1818[0m
+[0mGET /product [36m304 [0m2.769 ms - -[0m
+[0mGET /customer.html [32m200 [0m4.258 ms - 1240[0m
+[0mGET /javascripts/app.js [32m200 [0m1.147 ms - 1702[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m39.244 ms - 1818[0m
+[0mGET /product [32m200 [0m3.586 ms - 381[0m
+[0mGET /%7B%7Bselected.pictureUrl%7D%7D [33m404 [0m36.989 ms - 1818[0m
+(node:32755) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[0mPUT /product/5a1f5222c06b397effbf6465/upNumOrdered [32m200 [0m18.654 ms - 199[0m
+[0mGET /admin.html [36m304 [0m0.806 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.704 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m43.918 ms - 1818[0m
+[0mGET /product [32m200 [0m10.509 ms - 381[0m
+{ name: 'Test',
+  price: '100',
+  pictureUrl: 'https://www.mathworks.com/content/mathworks/www/en/solutions/verification-validation/jcr:content/svg.adapt.full.high.svg/1507664300553.svg',
+  numOrdered: 0 }
+[0mPOST /product [32m200 [0m22.557 ms - 239[0m
+[0mGET /customer.html [36m304 [0m1.422 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.433 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m38.385 ms - 1818[0m
+[0mGET /%7B%7Bselected.pictureUrl%7D%7D [33m404 [0m36.449 ms - 1818[0m
+[0mGET /product [32m200 [0m2.545 ms - 621[0m
+[0mPUT /product/5a1f5784602d347ff39628f5/upNumOrdered [32m200 [0m3.484 ms - 239[0m
+[0mGET /admin.html [36m304 [0m0.332 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.765 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m29.987 ms - 1818[0m
+[0mGET /product [32m200 [0m2.159 ms - 621[0m
+in Delete
+[0mDELETE /products/5a1f5784602d347ff39628f5 [32m200 [0m4.960 ms - 2[0m
+[0mGET /product [32m200 [0m5.177 ms - 381[0m
+[0mGET /admin.html [36m304 [0m0.618 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.629 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m24.645 ms - 1818[0m
+[0mGET /product [36m304 [0m1.923 ms - -[0m
+[0mGET /customer.html [36m304 [0m0.330 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.839 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m7.418 ms - 1818[0m
+[0mGET /%7B%7Bselected.pictureUrl%7D%7D [33m404 [0m10.673 ms - 1818[0m
+[0mGET /product [36m304 [0m4.224 ms - -[0m
+[0mGET /customer.html [36m304 [0m0.346 ms - -[0m
+[0mGET /javascripts/app.js [36m304 [0m0.538 ms - -[0m
+[0mGET /%7B%7Bproduct.pictureUrl%7D%7D [33m404 [0m11.210 ms - 1818[0m
+[0mGET /%7B%7Bselected.pictureUrl%7D%7D [33m404 [0m10.254 ms - 1818[0m
+[0mGET /product [36m304 [0m1.312 ms - -[0m
