@@ -2,54 +2,61 @@ angular.module('comment', [])
 .controller('MainCtrl', [
   '$scope','$http',
   function($scope,$http){
-     $scope.candidates = [];
-	
-	$scope.selectedCandidates=[];
 	$scope.submitted=false;
+     $scope.products = [];
+	$scope.name = '';
+	$scope.price = '';
+	$scope.pictureUrl = '';
 
-     $scope.addCandidate = function() {
-       if($scope.formContent === '') { return; }
+	$scope.selectedProducts=[];
+
+     $scope.addProduct = function() {
+       if($scope.name === '' || $scope.price === '' || $scope.pictureUrl==='') { return; }
        $scope.create({
-        name: $scope.formContent,
-        votes: 0,
+        name: $scope.name,
+	price: $scope.price,
+	pictureUrl: $scope.pictureUrl,
+        numOrdered: 0,
       });
-      $scope.formContent = '';
+      $scope.name = '';
+	$scope.price = '';
+	$scope.pictureUrl = '';
     };
 
-$scope.create = function(candidate) {
-    return $http.post('/candidate', candidate).success(function(data){
-      $scope.candidates.push(data);
+$scope.create = function(product) {
+    return $http.post('/product', product).success(function(data){
+      $scope.products.push(data);
     });
   };
 
-$scope.incrementUpvotes = function(comment) {
-      $scope.upvote(comment);
+$scope.incrementNumOrdered = function(product) {
+      $scope.upNumOrdered(product);
     };
 
-$scope.submitVotes = function() {
-	$scope.submitted=true;
-   for(var selected of $scope.selectedCandidates){
-      $http.put('/candidate/' + selected._id + '/upvote')
+$scope.submitProducts = function() {
+$scope.submitted=true;
+   for(var selected of $scope.selectedProducts){
+      $http.put('/product/' + selected._id + '/upNumOrdered')
         .success(function(data){
-          selected.votes += 1;
+          selected.numOrdered += 1;
         });
    }
     };
 
-$scope.selectionChange = function(candidate) {
-   if(!$scope.submitted){
-	var index = $scope.selectedCandidates.indexOf(candidate);
+$scope.selectionChange = function(product) {
+	if(!$scope.submitted){
+	var index = $scope.selectedProducts.indexOf(product);
 	if(index==-1){
-		$scope.selectedCandidates.push(candidate);
+		$scope.selectedProducts.push(product);
 	}
 	else{
-		$scope.selectedCandidates.splice(index, 1);  
+		$scope.selectedProducts.splice(index, 1);  
 	}
-    }
+}
 };
 
-$scope.delete = function(candidate) {
-      $http.delete('/candidates/' + candidate._id )
+$scope.delete = function(product) {
+      $http.delete('/products/' + product._id )
         .success(function(data){
           $scope.getAll();
         });
@@ -57,8 +64,8 @@ $scope.delete = function(candidate) {
     };
 
      $scope.getAll = function() {
-    	return $http.get('/candidate').success(function(data){
-   	   angular.copy(data, $scope.candidates);
+    	return $http.get('/product').success(function(data){
+   	   angular.copy(data, $scope.products);
    	 });
       };
      $scope.getAll();

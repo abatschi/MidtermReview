@@ -6,9 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/candidateDB',{useMongoClient:true});
+mongoose.connect('mongodb://localhost/productDB',{useMongoClient:true});
 
-require('./models/Candidates');
+require('./models/Products');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
